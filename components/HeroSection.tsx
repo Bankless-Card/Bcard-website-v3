@@ -298,6 +298,45 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
+
+      <section
+        id="HowWorksSection"
+        className="content-center justify-center bg-black py-12"
+      >
+        <div
+          id="HowWorksContentContainer"
+          className="mx-32 flex h-full grow flex-col"
+        >
+          <div
+            id="HowTopDiv"
+            className="my-12 flex h-full grow flex-row rounded-3xl bg-green-200 px-8 py-12"
+          >
+            <div id="HowTopLeftDiv" className="basis-1/2">
+              <h2 className="text-4xl">How does BCard work?</h2>
+              <p className="py-4">
+                BCard Demystified: It&apos;s as simple as spend, support, and
+                strengthen. Each purchase is a step towards financially robust
+                communities.
+              </p>
+            </div>
+            <div id="HowTopRightDiv" className="relative basis-1/2">
+              <Image
+                src={testImage}
+                alt="Image"
+                fill={true}
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          </div>
+          <div
+            id="HowBottomDiv"
+            className="flex h-full grow flex-row rounded-3xl bg-green-200 px-8 py-12"
+          >
+            <div> </div>
+            <div></div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
