@@ -1,10 +1,9 @@
-import { Divider } from "@chakra-ui/react";
 import React from "react";
 
 import Image from "next/image";
 import testImage from "../public/images/product/blog.png";
 
-const HeroSection = () => {
+const HeroSectionV2 = () => {
   return (
     <>
       <section
@@ -73,42 +72,67 @@ const HeroSection = () => {
       </section>
 
       <section
-        id="AboutSection"
-        className="content-center justify-center bg-gray-600"
+        id="HorizontalCardsSection"
+        className="content-center justify-center bg-black"
       >
-        <div
-          id="AboutContentContainer"
-          className="flex h-full grow flex-col flex-wrap px-24 pb-36 pt-36"
-        >
-          <div id="AboutTextAndImageContainer" className="flex w-full flex-col">
-            <h2 className="w-full pb-4 pl-32 text-4xl text-white">
-              About/Mission
-            </h2>
-            <div id="ParagraphAndText" className="flex w-full flex-row">
-              <div id="AboutLeft" className="basis-1/2 pl-32 pr-16">
-                <p className="py-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit, sed
-                  do eiqusmod tempor incididunt ut labore et dolore mana aliqua.
-                </p>
-                <p className="pb-32 pt-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit, sed
-                  do eiqusmod tempor incididunt ut labore et dolore mana aliqua.
-                </p>
-              </div>
-              <div id="AboutRight" className="basis-1/2 pl-16">
-                <div
-                  id="AboutImageContainer"
-                  className="relative h-full w-full"
-                >
-                  <Image
-                    src={testImage}
-                    alt="Image"
-                    fill={true}
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-              </div>
+        <div id="HorizCardContaner" className="mx-32 flex gap-x-8">
+          <div id="HorizCard1" className="my-4  basis-1/3 bg-slate-500 p-8">
+            <div id="HCardImgContaner" className="relative h-64">
+              {" "}
+              <Image
+                src={testImage}
+                alt="Image"
+                fill={true}
+                style={{ objectFit: "contain" }}
+              />
             </div>
+            <h3 className="mx-auto text-3xl font-bold">
+              The <span className="text-[#fc5710]">community</span> owned card!
+            </h3>
+            <p className="mt-4">
+              Your Defy Card is by DAOs, for DAOs. Unlike centralized crypto
+              cards, you have a say in how we build the future.
+            </p>
+          </div>
+
+          <div id="HorizCard2" className="my-4 basis-1/3 bg-slate-500 p-8">
+            <div id="HCardImgContaner" className="relative h-64">
+              {" "}
+              <Image
+                src={testImage}
+                alt="Image"
+                fill={true}
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+            <h3 className="text-3xl font-bold">
+              Support your <span className="text-[#13b5ec]">favorite</span>{" "}
+              communities
+            </h3>
+            <p>
+              Every time you use a card, 1-2% Of the purchase price goes to a
+              bank. Bankless Card redirects some of that fee to your favorite
+              community.
+            </p>
+          </div>
+
+          <div id="HorizCard3" className="my-4 basis-1/3 bg-slate-500 p-8">
+            <div id="HCardImgContaner" className="relative h-64">
+              {" "}
+              <Image
+                src={testImage}
+                alt="Image"
+                fill={true}
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+            <h3 className="text-3xl font-bold ">
+              Easily <span className="text-[#27ffa4]">onboard</span> new members
+            </h3>
+            <p>
+              With our easy-to-use mobile app, you can onboard new friends into
+              your community with a simple download.
+            </p>
           </div>
         </div>
       </section>
@@ -196,128 +220,4 @@ const HeroSection = () => {
   );
 };
 
-{
-  /**
-   *
-   * TEMPORARY POTENTIALLY USABLE SECTIONS
-   *
-   */
-}
-
-{
-  /* ! Keeping this section commented out in case the design from the Lo-Fi gets added on later to the final design  */
-}
-{
-  /* <div
-            id="AboutStatistics"
-            className="ml-16 flex min-h-full w-1/2 basis-1/5 rounded-2xl bg-slate-100 p-4"
-          >
-            <div className="w-full">
-              <div className="w-full pb-4 pl-4">
-
-                <span className="rounded-[50%] border-2 border-solid"></span>
-                <span className="text-gray-500">Statistics</span>
-              </div>
-              <div className="flex flex-row">
-                <span className="border-r-solid mx-4 basis-1/3 border-r-2 text-gray-500">
-                  <div className="w-full font-bold">XXXX</div>
-                  <div className="w-full">Customers</div>
-                </span>
-                <span className="border-r-solid mx-4 basis-1/3 border-r-2 text-gray-500">
-                  <div className="w-full font-bold">XXX</div>
-                  <div className="w-full">Years</div>
-                </span>
-                <span className="basis-1/3 text-gray-500">
-                  <div className="w-full font-bold">XX</div>
-                  <div className="w-full">Member of DAO</div>
-                </span>
-              </div>
-            </div>
-          </div> */
-}
-
-{
-  /* ! Keeping this section commented out in case the design from the Lo-Fi gets added on later to the final design  */
-}
-{
-  /* <section
-        id="ComparisonSection"
-        className="content-center justify-center bg-gray-600 py-12"
-      >
-        <div
-          id="ComparisonContentContainer"
-          className="flex h-full grow flex-col"
-        >
-          <div
-            id="ComparisonText"
-            className="mb-12 flex flex-col content-center justify-center"
-          >
-            <h2 className="m-auto">It is no comparison</h2>
-            <p className="m-auto pt-4">
-              &quot;If you don&apos;t try this app, you won&apos;t become the
-              superhero you were meant to be&quot;
-            </p>
-          </div>
-          <div id="ComparisonTable" className="mx-48">
-            <table className="h-full w-full rounded-xl shadow-md">
-              <thead>
-                <tr>
-                  <th className=""></th>
-                  <th>BCard</th>
-                  <th>Juno finance</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="even:bg-blue-gray-50/50">
-                  <td>Selling Point</td>
-                  <td className="">O</td>
-                  <td>O</td>
-                </tr>
-                <tr className="even:bg-slate-blue-50/50">
-                  <td>Selling Point</td>
-                  <td>O</td>
-                  <td>O</td>
-                </tr>
-                <tr className="even:bg-blue-gray-50/50">
-                  <td>Selling Point</td>
-                  <td>O</td>
-                  <td>O</td>
-                </tr>
-                <tr className="even:bg-blue-gray-50/50">
-                  <td>Selling Point</td>
-                  <td>O</td>
-                  <td>X</td>
-                </tr>
-                <tr className="even:bg-blue-gray-50/50">
-                  <td>Selling Point</td>
-                  <td>O</td>
-                  <td>X</td>
-                </tr>
-                <tr className="even:bg-blue-gray-50/50">
-                  <td>Selling Point</td>
-                  <td>O</td>
-                  <td>X</td>
-                </tr>
-                <tr className="even:bg-blue-gray-50/50">
-                  <td>Selling Point</td>
-                  <td>O</td>
-                  <td>X</td>
-                </tr>
-                <tr className="even:bg-blue-gray-50/50">
-                  <td>Selling Point</td>
-                  <td>O</td>
-                  <td>X</td>
-                </tr>
-                <tr className="even:bg-blue-gray-50/50">
-                  <td>Selling Point</td>
-                  <td>O</td>
-                  <td>X</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section> */
-}
-
-export default HeroSection;
+export default HeroSectionV2;

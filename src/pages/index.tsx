@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navbar from "components/Navbar";
 import LandingPage from "./landingpage";
-import HeroSection from "components/HeroSection";
+import HeroSectionV2 from "components/HeroSectionV2";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <HeroSection />
+      <HeroSectionV2 />
       {/* <LandingPage /> */}
     </>
   );
